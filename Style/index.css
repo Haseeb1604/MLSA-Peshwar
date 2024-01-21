@@ -16,33 +16,6 @@ html {
 	scroll-behavior: smooth;
 }
 
-.breadcrumb_nav{
-    padding: 9px 0;
-    background: rgb(0, 102, 255);
-    border-top: 2px solid rgb(0, 10, 255);
-}
-
-.breadcrumb_nav .breadcrumb_content{
-    width: 25%;
-    margin: 0 auto;
-}
-
-.breadcrumb_nav .breadcrumb_nav_list{
-    text-align: center;
-    color: white;
-    font-size: 18px;
-    font-weight: 500;
-    text-shadow: 1px 1px 2px rgb(0, 0, 255), -1px -1px 2px rgb(0, 0, 255);
-}
-
-.breadcrumb_nav .breadcrumb_nav_list .breadcrumb_item:nth-of-type(odd){
-    cursor: pointer;
-}
-
-.breadcrumb_nav .breadcrumb_nav_list .breadcrumb_item:nth-of-type(even){
-    cursor: default;
-}
-
 /* All Similar Content Styling */
 .about-section,
 footer {
@@ -357,6 +330,11 @@ section .title::after {
 /* *************************** */
 /*        team content         */
 /* *************************** */
+
+section.team-page{
+	padding: 0;
+}
+
 .team-section .title::after {
 	content: "Team Members";
 }
@@ -492,6 +470,10 @@ section.joinus-section {
     content: "Future Events";
 }
 
+.Upcoming.Events{
+	margin-bottom: -160px;
+}
+
 .Events .title::after {
     content: "Events Held";
 }
@@ -582,11 +564,6 @@ section.joinus-section {
 		margin-right: 20px;
 	}
 
-	.breadcrumb_nav .breadcrumb_content{
-        width: 36%;
-        margin: 0 auto;
-    }
-
 	.showcase {
 		background-position: left 90% top 0% !important;
 	}
@@ -622,11 +599,6 @@ section.joinus-section {
 
 
 @media (max-width: 767px) {
-	.breadcrumb_nav .breadcrumb_content{
-        width: 46%;
-        margin: 0 auto;
-    }
-
 	.nav-link {
 		font-size: 18px;
 		margin-top: 3px;
@@ -655,13 +627,6 @@ section.joinus-section {
 }
 
 @media (max-width: 600px) {
-	.breadcrumb_nav .breadcrumb_content{
-        width: 56%;
-    }
-    .breadcrumb_nav .breadcrumb_nav_list{
-        font-size: 16px;
-    }
-
 	.showcase img {
 		height: 66vh;
 	}
@@ -707,13 +672,6 @@ section.joinus-section {
 }
 
 @media (max-width: 425px) {
-	.breadcrumb_nav .breadcrumb_content{
-        width: 66%;
-    }
-    .breadcrumb_nav .breadcrumb_nav_list{
-        font-size: 15px;
-    }
-
 	.navbar-brand {
 		margin-left: 0px;
 	}
@@ -757,10 +715,6 @@ section.joinus-section {
 }
 
 @media (max-width: 375px){
-	.breadcrumb_nav .breadcrumb_content{
-        width: 80%;
-    }
-
 	.about-section .text{
 		font-size: 19px;
 	}
