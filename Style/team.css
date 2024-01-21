@@ -11,32 +11,7 @@
 	color: rgb(0, 132, 255) !important;
 }
 
-.breadcrumb_nav{
-    padding: 9px 0;
-    background: rgb(0, 102, 255);
-    border-top: 2px solid rgb(0, 10, 255);
-}
 
-.breadcrumb_nav .breadcrumb_content{
-    width: 25%;
-    margin: 0 auto;
-}
-
-.breadcrumb_nav .breadcrumb_nav_list{
-    text-align: center;
-    color: white;
-    font-size: 18px;
-    font-weight: 500;
-    text-shadow: 1px 1px 2px rgb(0, 0, 255), -1px -1px 2px rgb(0, 0, 255);
-}
-
-.breadcrumb_nav .breadcrumb_nav_list .breadcrumb_item:nth-of-type(odd){
-    cursor: pointer;
-}
-
-.breadcrumb_nav .breadcrumb_nav_list .breadcrumb_item:nth-of-type(even){
-    cursor: default;
-}
 
 .profile{
     padding: 30px 0;

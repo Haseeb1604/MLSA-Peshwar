@@ -16,6 +16,33 @@ html {
 	scroll-behavior: smooth;
 }
 
+.breadcrumb_nav{
+    padding: 9px 0;
+    background: rgb(0, 102, 255);
+    border-top: 2px solid rgb(0, 10, 255);
+}
+
+.breadcrumb_nav .breadcrumb_content{
+    width: 25%;
+    margin: 0 auto;
+}
+
+.breadcrumb_nav .breadcrumb_nav_list{
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    text-shadow: 1px 1px 2px rgb(0, 0, 255), -1px -1px 2px rgb(0, 0, 255);
+}
+
+.breadcrumb_nav .breadcrumb_nav_list .breadcrumb_item:nth-of-type(odd){
+    cursor: pointer;
+}
+
+.breadcrumb_nav .breadcrumb_nav_list .breadcrumb_item:nth-of-type(even){
+    cursor: default;
+}
+
 /* All Similar Content Styling */
 .about-section,
 footer {
@@ -186,85 +213,15 @@ section .title::after {
 /* *************************** */
 
 .navbar{
-	padding: 30px 0px;
+	padding: 15px 0px;
+	background: #2F2F2F;
 	-webkit-transition: all 0.5s;
 	-o-transition: all 0.5s;
 	transition: all 0.5s;
 }
 
-.sticky .navbar {
-	padding: 15px 0px;
-	background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 1)), to(rgba(0, 0, 0, 0.9)));
-	background: -o-linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.9));
-	background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.9));
-	-webkit-animation: fade-in-top 0.6s 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-			animation: fade-in-top 0.6s 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-}
-
- @-webkit-keyframes fade-in-top {
-	0% {
-	  -webkit-transform: translateY(-50px);
-			  transform: translateY(-50px);
-	  opacity: 0;
-	  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.5)));
-	  background: -o-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5));
-	  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5));
-	}
-	50%{
-		-webkit-transform: translateY(-10px);
-			  transform: translateY(-10px);
-	  	opacity: 0.5;
-		background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.7)));
-		background: -o-linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7));
-		background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7));
-	}
-	100% {
-	  -webkit-transform: translateY(0);
-			  transform: translateY(0);
-	  opacity: 1;
-	  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 1)), to(rgba(0, 0, 0, 0.9)));
-	  background: -o-linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.9));
-	  background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.9));
-	}
-  }
-  @keyframes fade-in-top {
-	0% {
-		-webkit-transform: translateY(-50px);
-				transform: translateY(-50px);
-		opacity: 0;
-		background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.5)));
-		background: -o-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5));
-		background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5));
-	  }
-	  50%{
-		  -webkit-transform: translateY(-10px);
-				transform: translateY(-10px);
-			opacity: 0.5;
-		  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.7)));
-		  background: -o-linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7));
-		  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7));
-	  }
-	  100% {
-		-webkit-transform: translateY(0);
-				transform: translateY(0);
-		opacity: 1;
-		background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 1)), to(rgba(0, 0, 0, 0.9)));
-		background: -o-linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.9));
-		background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.9));
-	  }
-  }
-  
-
-.sticky .navbar-brand img {
+.navbar .navbar-brand img {
 	margin-left: 4px;
-}
-
-.sticky .nav-link {
-	color: rgb(255, 255, 255) !important;
-}
-
-.sticky .active{
-	color: rgb(0, 132, 255) !important;
 }
 
 .navbar .active{
@@ -272,7 +229,7 @@ section .title::after {
 	text-shadow: 1px 1px 2px black;
 }
 
-.navbar-brand img {
+.navbar .navbar-brand img {
 	width: 150px;
 	padding: 0px;
 }
@@ -307,15 +264,11 @@ section .title::after {
 .navbar-toggler div {
 	width: 25px;
 	height: 3px;
-	background-color: black;
+	background-color: white;
 	margin: 5px;
 	-webkit-transition: all 0.5s ease;
 	-o-transition: all 0.5s ease;
 	transition: all 0.5s ease;
-}
-
-.sticky .navbar-toggler div {
-	background-color: white;
 }
 
 .toggle .line1{
@@ -533,6 +486,57 @@ section.joinus-section {
 }
 
 /* *************************** */
+/*        Events Page          */
+/* *************************** */
+.Upcoming.Events .title::after{
+    content: "Future Events";
+}
+
+.Events .title::after {
+    content: "Events Held";
+}
+
+.Events  .card{
+    position: relative;
+    text-align: center;
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+    margin:20px 5px;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #f3f2f2;
+    -webkit-box-shadow: 3px 3px 6px #cacaca, -3px -3px 6px #ffffff;
+            box-shadow: 3px 3px 6px #cacaca, -3px -3px 6px #ffffff;
+    border: none;
+    cursor: pointer;
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.Events .card:hover{
+    -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+            transform: scale(1.05);
+}
+
+.Events .card .card-img-top{
+    width: 100%;
+}
+
+.Events .card img{
+    width: 100%;
+}
+
+.Events .Events h3{
+    color: rgb(0, 0, 0);
+    text-shadow: none;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+/* *************************** */
 /*           Footer            */
 /* *************************** */
 .footer {
@@ -558,12 +562,6 @@ section.joinus-section {
 /* *************************** */
 
 @media (max-width: 990px) {
-	.sticky .navbar {
-		background-color: rgba(255, 255, 255, 0.4);
-		padding: 0px;
-		width: 88%;
-	}
-
 	.nav-link {
 		font-size: 17px;
 		margin: 0 3px;
@@ -583,6 +581,11 @@ section.joinus-section {
 	.navbar-nav {
 		margin-right: 20px;
 	}
+
+	.breadcrumb_nav .breadcrumb_content{
+        width: 36%;
+        margin: 0 auto;
+    }
 
 	.showcase {
 		background-position: left 90% top 0% !important;
@@ -611,22 +614,21 @@ section.joinus-section {
     .team-section .container .row .col-lg-4 {
         margin: 20px 0px;
     }
+
+	.Events  .card{
+        max-width: 550px;
+    }
 }
 
 
 @media (max-width: 767px) {
-	.sticky .navbar {
-		background-color: rgba(255, 255, 255, 0.6);
-		width: 100%;
-		border-radius: 0;
-	}
-	.navbar {
-		background-color: white;
-	}
+	.breadcrumb_nav .breadcrumb_content{
+        width: 46%;
+        margin: 0 auto;
+    }
+
 	.nav-link {
 		font-size: 18px;
-		color: black !important;
-		text-shadow: 0px 1px 1px rgba(0, 132, 255, 0.5) !important;
 		margin-top: 3px;
 		margin-left: 20px;
 		text-align: center;
@@ -646,9 +648,20 @@ section.joinus-section {
 		color: rgb(0, 132, 255) !important;
 		text-shadow: 0px 1px 1px black;
 	}
+
+	.Events  .card{
+        max-width: 480px;
+    }
 }
 
 @media (max-width: 600px) {
+	.breadcrumb_nav .breadcrumb_content{
+        width: 56%;
+    }
+    .breadcrumb_nav .breadcrumb_nav_list{
+        font-size: 16px;
+    }
+
 	.showcase img {
 		height: 66vh;
 	}
@@ -668,9 +681,7 @@ section.joinus-section {
 	section .title::after {
 		font-size: 18px;
 	}
-}
 
-@media (max-width: 550px) {
 	.navbar-brand img {
 		margin-left: 8px;
 		width: 120px;
@@ -689,9 +700,20 @@ section.joinus-section {
 		        transform: scaleY(1.05);
 		font-size: 17px;
 	}
+
+	.Events  .card{
+        max-width: 400px;
+    }
 }
 
 @media (max-width: 425px) {
+	.breadcrumb_nav .breadcrumb_content{
+        width: 66%;
+    }
+    .breadcrumb_nav .breadcrumb_nav_list{
+        font-size: 15px;
+    }
+
 	.navbar-brand {
 		margin-left: 0px;
 	}
@@ -713,9 +735,32 @@ section.joinus-section {
 	.about-section .text{
 		font-size: 22px;
 	}
+	.Events  .card{
+        max-width: 350px;
+    }
+    .Events h3{
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 392px){
+    .Events  .card{
+        max-width: 300px;
+    }
+    .Events h3{
+        font-size: 1.2rem;
+    }
+    .Events .card p,
+    .Events .card li{
+        font-size: 0.9rem;
+    }
 }
 
 @media (max-width: 375px){
+	.breadcrumb_nav .breadcrumb_content{
+        width: 80%;
+    }
+
 	.about-section .text{
 		font-size: 19px;
 	}
@@ -752,4 +797,15 @@ section.joinus-section {
 	.about-section .text{
 		font-size: 18px;
 	}
+
+	.Events  .card{
+        max-width: 250px;
+    }
+    .Events h3{
+        font-size: 1rem;
+    }
+    .Events .card p,
+    .Events .card li{
+        font-size: 0.8rem;
+    }
 }
